@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About | DoubleU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: #000; color: white; font-family: 'Inter', sans-serif; }
+        .cyan-glow { text-shadow: 0 0 20px rgba(6, 182, 212, 0.4); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col p-8 md:p-24">
+    <nav class="mb-24">
+        <a href="/" class="text-[9px] uppercase tracking-[0.5em] text-gray-500 hover:text-white">← Back</a>
+    </nav>
+
+    <main class="max-w-4xl mx-auto grid md:grid-cols-5 gap-16 items-start">
+        <div class="md:col-span-2">
+            <h1 class="text-8xl font-black italic uppercase tracking-tighter leading-none cyan-glow">Double<br><span class="text-cyan-500 text-9xl">U</span></h1>
+            <p class="text-[10px] uppercase tracking-[0.5em] text-gray-600 mt-8 font-bold">Oklahoma City, OK</p>
+        </div>
+        
+        <div id="bio-text" class="md:col-span-3 text-gray-400 text-lg leading-relaxed space-y-6 tracking-wide italic">
+            </div>
+    </main>
+
+    <script>
+        async function loadAbout() {
+            const res = await fetch('/config.json');
+            const cfg = await res.json();
+            const bioDiv = document.getElementById('bio-text');
+            // Formats line breaks as paragraphs
+            bioDiv.innerHTML = cfg.bio.split('\n').map(p => `<p>${p}</p>`).join('');
+        }
+        loadAbout();
+    </script>
+</body>
+</html>

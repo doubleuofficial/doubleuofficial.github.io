@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoubleU | The Journey So Far</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-orange': '#FF7A00',
+                        'cyan-brand': '#06B6D4',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Neon Utilities */
+        .glow-cyan {
+            box-shadow: 0 0 5px rgba(6, 182, 212, 0.5), 0 0 20px rgba(6, 182, 212, 0.2);
+        }
+        .text-glow-cyan {
+            text-shadow: 0 0 8px rgba(6, 182, 212, 0.8), 0 0 15px rgba(6, 182, 212, 0.4);
+        }
+        .glow-orange {
+            box-shadow: 0 0 5px rgba(255, 122, 0, 0.5), 0 0 20px rgba(255, 122, 0, 0.2);
+        }
+        .text-glow-orange {
+            text-shadow: 0 0 8px rgba(255, 122, 0, 0.8), 0 0 15px rgba(255, 122, 0, 0.4);
+        }
+        .border-glow-cyan {
+            border-color: rgba(6, 182, 212, 0.6);
+            box-shadow: inset 0 0 10px rgba(6, 182, 212, 0.2), 0 0 15px rgba(6, 182, 212, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-black">
+
+    <section class="relative overflow-hidden bg-black py-20 px-6 sm:px-12 lg:px-24 min-h-screen flex items-center">
+        
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" 
+             style="background-image: url('https://www.transparenttextures.com/patterns/stardust.png');"></div>
+        
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-cyan-900/20 rounded-full blur-[100px]"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-orange-900/10 rounded-full blur-[100px]"></div>
+
+        <div class="relative max-w-4xl mx-auto border border-white/5 bg-gray-900/30 backdrop-blur-md p-8 md:p-16 rounded-3xl border-glow-cyan">
+            
+            <div class="flex items-center space-x-6 mb-12">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-orange-500/50 to-transparent"></div>
+                <h2 class="text-neon-orange font-mono text-xs md:text-sm tracking-[0.4em] uppercase text-glow-orange">
+                    The Journey So Far
+                </h2>
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-orange-500/50 to-transparent"></div>
+            </div>
+
+            <div class="space-y-8 text-gray-300 leading-relaxed text-lg md:text-xl font-light">
+                <p>
+                    To everyone who has ever hit play: <span class="text-white font-medium">thank you.</span>
+                </p>
+                
+                <p>
+                    Music has always been my way of processing the world—a way to turn the noise into something meaningful. Seeing these tracks find a home in your playlists and your daily lives means everything to me. Whether you’ve been here since the early days or you just discovered the sound, you are the reason this project has a <span class="text-cyan-brand text-glow-cyan font-normal">place to land.</span>
+                </p>
+
+                <p>
+                    Creating music is a solo process, but sharing it is a community effort. Thank you for listening, for sharing, and for being part of the <span class="text-white border-b border-white/20">DoubleU family</span>. Your support allows me to keep creating without compromise.
+                </p>
+            </div>
+
+            <div class="mt-16 pt-10 border-t border-white/5 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+                <div class="space-y-1">
+                    <p class="text-white font-bold text-2xl italic tracking-tight">New sounds are always on the horizon.</p>
+                    <p class="text-gray-500 font-mono text-xs uppercase tracking-widest">Thanks for riding with me.</p>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="flex flex-col items-end">
+                        <span class="text-white text-xs font-mono tracking-tighter opacity-40 uppercase">Artist</span>
+                        <span class="text-white tracking-[0.2em] font-black text-2xl uppercase">DoubleU</span>
+                    </div>
+                    <div class="h-12 w-1 bg-gradient-to-b from-neon-orange to-cyan-brand rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

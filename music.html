@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discography // DoubleU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: #050505; color: #eee; font-family: sans-serif; }
+        .accent { color: #FF5F1F; }
+    </style>
+</head>
+<body class="p-6 md:p-24">
+    <nav class="mb-12">
+        <a href="/" class="text-[10px] uppercase tracking-[0.5em] text-gray-500 hover:text-white transition-colors">← Back to Terminal</a>
+    </nav>
+
+    <header class="mb-16">
+        <h1 class="text-6xl md:text-8xl font-black italic uppercase tracking-tighter accent">Discography</h1>
+        <p class="text-[10px] uppercase tracking-[0.5em] text-gray-600 mt-4 font-bold">Chronological Archive // 405 Intelligence</p>
+    </header>
+    
+    <div id="discography-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl">
+        </div>
+
+    <script>
+        async function loadMusic() {
+            try {
+                const res = await fetch('./music.json');
+                const data = await res.json();
+                const grid = document.getElementById('discography-grid');
+
+                // Sort newest first & filter for main releases (Singles/Albums)
+                data.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
+                const mainReleases = data.filter(item => item.type === "Single" || item.type === "Album");
+
+                grid.innerHTML = mainReleases.map(item => `
+                    <a href="${item.site_path}" class="group block bg-zinc-900/20 border border-white/5 p-4 hover:border-cyan-500/50 transition-all duration-500">
+                        <div class="aspect-square overflow-hidden mb-6 border border-white/5">
+                            <img src="${item.image_path}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 transform group-hover:scale-110">
+                        </div>
+                        <div class="space-y-1">
+                            <h3 class="font-black italic uppercase tracking-tighter text-2xl group-hover:text-cyan-400 transition-colors">${item.title}</h3>
+                            <div class="flex justify-between items-center text-[9px] tracking-[0.2em] font-bold uppercase text-gray-500">
+                                <span>${item.type}</span>
+                                <span class="accent">${item.release_date.split('-')[0]}</span>
+                            </div>
+                        </div>
+                    </a>
+                `).join('');
+            } catch (e) { console.error("Data Link Failure", e); }
+        }
+        loadMusic();
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DoubleU // Official</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background: #050505; color: #eee; font-family: sans-serif; cursor: crosshair; }
+        .glitch:hover { text-shadow: 2px 0 #0ff, -2px 0 #f0f; }
+    </style>
+</head>
+<body class="overflow-x-hidden antialiased">
+
+    <nav class="fixed top-0 w-full z-50 p-6 flex justify-between items-center backdrop-blur-md border-b border-white/5">
+        <a href="/" class="text-[#FF5F1F] font-black italic tracking-tighter text-2xl glitch">DoubleU</a>
+        <div class="flex items-center space-x-6 text-[10px] font-bold uppercase tracking-[0.3em]">
+            <a href="/music.html" class="hover:text-cyan-400 transition-colors">Music</a>
+            <a href="/about.html" class="hover:text-cyan-400 transition-colors">About</a>
+            <a href="/contact.html" class="hover:text-cyan-400 transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <h1 class="text-7xl md:text-[10rem] font-black italic uppercase tracking-tighter text-[#FF5F1F] leading-[0.8]">DoubleU</h1>
+        <p class="mt-6 text-[10px] tracking-[0.5em] uppercase text-cyan-400">Oklahoma City // Neural Trap</p>
+    </section>
+
+    <section id="latest-container" class="w-full max-w-6xl mx-auto px-6 py-20"></section>
+
+    <section class="w-full max-w-6xl mx-auto px-6 py-20">
+        <div class="flex items-center gap-4 mb-12">
+            <h3 class="text-[10px] font-black uppercase tracking-[0.5em] text-[#FF5F1F]">Vault Selections</h3>
+            <div class="h-[1px] flex-grow bg-white/10"></div>
+        </div>
+        <div id="featured-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+    </section>
+<footer class="p-12 border-t border-white/5 text-center">
+    <div class="flex justify-center items-center gap-8 mb-12 flex-wrap">
+        <a href="https://www.facebook.com/share/18SRmpe5CH/" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">
+            <i class="fab fa-facebook-f text-xl"></i>
+        </a>
+        <a href="https://tiktok.com/doubleu2022" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">
+            <i class="fab fa-tiktok text-xl"></i>
+        </a>
+        <a href="https://instagram.com/doubleuuotb" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">
+            <i class="fab fa-instagram text-xl"></i>
+        </a>
+
+        <div class="h-4 w-px bg-white/10 mx-2"></div>
+
+        <a href="https://open.spotify.com/artist/78gVqbaxxYAd9U5uF0Yq7i" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" class="w-6 h-6 grayscale hover:grayscale-0 transition-all">
+        </a>
+        <a href="https://music.apple.com/us/artist/doubleu/1586705800" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="w-5 h-5 invert hover:scale-110 transition-transform">
+        </a>
+        <a href="https://www.youtube.com/@DoubleUOTB" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" class="w-7 h-7 grayscale hover:grayscale-0 transition-all">
+        </a>
+    </div>
+
+    <form id="email-form" class="max-w-md mx-auto">
+        <input type="email" id="email-input" placeholder="JOIN THE NETWORK (EMAIL)" class="w-full bg-transparent border-b border-white/20 p-4 text-center focus:outline-none focus:border-[#FF5F1F] transition-colors uppercase text-xs tracking-widest text-white" required>
+        <p id="form-status" class="text-[8px] mt-4 tracking-widest opacity-0 transition-opacity uppercase font-bold text-cyan-400"></p>
+    </form>
+</footer>
+
