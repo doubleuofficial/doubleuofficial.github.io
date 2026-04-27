@@ -1,0 +1,13 @@
+# Security Policy for doubleuofficial.online
+# Defined by RFC 9116
+
+Contact: mailto:security@doubleuofficial.online
+Expires: 2027-04-26T12:00:00.000Z
+Preferred-Languages: en
+Canonical: https://doubleuofficial.online/.well-known/security.txt
+Policy: https://doubleuofficial.online/security-policy
+
+# Acknowledgments
+# This section can point to your existing Acknowledgements page 
+# if you choose to list researchers there in the future.
+Acknowledgments: https://doubleuofficial.online/acknowledgements
