@@ -11,8 +11,7 @@
         .accent-orange { color: #FF5F1F; }
         .accent-cyan { color: #22d3ee; }
         .glitch:hover { text-shadow: 2px 0 #0ff, -2px 0 #f0f; }
-        /* Smooth fade-in for dynamic content */
-        .fade-in { animation: fadeIn 1s ease-in forwards; }
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
@@ -27,9 +26,9 @@
         </div>
     </nav>
 
-    <header class="min-h-[60vh] flex flex-col justify-center items-center text-center px-4 pt-20">
+    <header class="min-h-[50vh] flex flex-col justify-center items-center text-center px-4 pt-32">
         <h1 class="text-7xl md:text-9xl font-black italic uppercase tracking-tighter leading-none mb-4">DoubleU</h1>
-        <p class="accent-cyan text-[10px] font-bold uppercase tracking-[0.6em] mb-8">Oklahoma City // Neural Trap</p>
+        <p class="accent-cyan text-[10px] font-bold uppercase tracking-[0.6em] mb-8 italic">Oklahoma City // Neural Trap</p>
         <div class="h-px w-24 bg-white/20"></div>
     </header>
 
@@ -38,8 +37,7 @@
             <h3 class="text-[10px] font-black uppercase tracking-[0.5em] accent-cyan">Latest Release</h3>
             <div class="h-[1px] flex-grow bg-white/10"></div>
         </div>
-        <div id="latest-release-container">
-        </div>
+        <div id="latest-release-container"></div>
     </section>
 
     <section class="w-full max-w-6xl mx-auto px-6 py-12">
@@ -47,38 +45,36 @@
             <h3 class="text-[10px] font-black uppercase tracking-[0.5em] accent-orange">Vault Selections</h3>
             <div class="h-[1px] flex-grow bg-white/10"></div>
         </div>
-        <div id="featured-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            </div>
+        <div id="featured-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
     </section>
 
-    <footer class="p-12 border-t border-white/5 text-center mt-20">
-        <div class="flex justify-center items-center gap-8 mb-12 flex-wrap">
-            <a href="https://www.facebook.com/share/18SRmpe5CH/" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">
-                <i class="fab fa-facebook-f text-lg"></i>
-            </a>
-            <a href="https://tiktok.com/doubleu2022" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">
-                <i class="fab fa-tiktok text-lg"></i>
-            </a>
-            <a href="https://instagram.com/doubleuuotb" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">
-                <i class="fab fa-instagram text-lg"></i>
-            </a>
+    <footer class="p-12 border-t border-white/5 text-center mt-24">
+        <div class="flex justify-center items-center gap-6 mb-12 flex-nowrap overflow-hidden">
+            
+            <div class="flex items-center gap-5 shrink-0">
+                <a href="https://www.facebook.com/share/18SRmpe5CH/" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity"><i class="fab fa-facebook-f text-lg"></i></a>
+                <a href="https://tiktok.com/doubleu2022" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity"><i class="fab fa-tiktok text-lg"></i></a>
+                <a href="https://instagram.com/doubleuuotb" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity"><i class="fab fa-instagram text-lg"></i></a>
+            </div>
 
-            <div class="h-4 w-px bg-white/10 mx-2"></div>
+            <div class="h-4 w-px bg-white/10 shrink-0"></div>
 
-            <a href="https://open.spotify.com/artist/78gVqbaxxYAd9aLEZJ49YG" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" class="w-5 h-5 grayscale hover:grayscale-0">
-            </a>
-            <a href="https://music.apple.com/us/artist/doubleu/1586705800" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="w-5 h-5 invert">
-            </a>
-            <a href="https://www.youtube.com/@DoubleUOTB" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" class="w-6 h-6 grayscale hover:grayscale-0">
-            </a>
+            <div class="flex items-center gap-5 shrink-0">
+                <a href="https://open.spotify.com/artist/78gVqbaxxYAd9aLEZJ49YG" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" class="w-5 h-5 grayscale hover:grayscale-0 transition-all">
+                </a>
+                <a href="https://music.apple.com/us/artist/doubleu/1586705800" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="w-5 h-5 invert hover:scale-110 transition-transform">
+                </a>
+                <a href="https://www.youtube.com/@DoubleUOTB" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" class="w-6 h-6 grayscale hover:grayscale-0 transition-all">
+                </a>
+            </div>
         </div>
 
         <form id="email-form" class="max-w-md mx-auto">
             <input type="email" id="email-input" placeholder="JOIN THE NETWORK (EMAIL)" class="w-full bg-transparent border-b border-white/20 p-4 text-center focus:outline-none focus:border-[#FF5F1F] transition-colors uppercase text-[10px] tracking-widest text-white" required>
-            <p id="form-status" class="text-[8px] mt-4 tracking-widest opacity-0 transition-opacity uppercase font-bold text-cyan-400"></p>
+            <p id="form-status" class="text-[8px] mt-4 tracking-widest opacity-0 transition-opacity uppercase font-bold accent-cyan"></p>
         </form>
     </footer>
 
@@ -88,13 +84,13 @@
                 const response = await fetch('./music.json');
                 const data = await response.json();
                 
-                // 1. Handle Latest Release (First entry)
+                // 1. Render Latest Release
                 const latest = data[0];
                 const latestContainer = document.getElementById('latest-release-container');
                 latestContainer.innerHTML = `
                     <div class="fade-in relative bg-white/5 border border-white/10 p-6 md:p-10 flex flex-col md:flex-row items-center gap-10 hover:border-cyan-500/30 transition-all duration-500">
                         <div class="w-full md:w-1/3 aspect-square overflow-hidden border border-white/10">
-                            <img src="${latest.image_path}" class="w-full h-full object-cover">
+                            <img src="${latest.image_path}" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
                         </div>
                         <div class="flex-grow text-center md:text-left">
                             <h2 class="text-5xl md:text-7xl font-black italic uppercase tracking-tighter mb-2">${latest.title}</h2>
@@ -103,7 +99,7 @@
                         </div>
                     </div>`;
 
-                // 2. Handle Vault (Randomize the rest)
+                // 2. Render Random Vault
                 const vaultData = data.slice(1).sort(() => 0.5 - Math.random());
                 const grid = document.getElementById('featured-grid');
                 grid.innerHTML = vaultData.slice(0, 3).map(track => `
@@ -115,11 +111,11 @@
                         <p class="text-[8px] tracking-[0.3em] opacity-40 uppercase mt-1">${track.type} // ${track.release_date.split('-')[0]}</p>
                     </a>`).join('');
 
-                // 3. Simple Form Local Feedback
+                // 3. Simple Submit Feedback
                 document.getElementById('email-form').onsubmit = (e) => {
                     e.preventDefault();
                     const status = document.getElementById('form-status');
-                    status.textContent = "CONNECTION ESTABLISHED";
+                    status.textContent = "TRANSMISSION RECEIVED";
                     status.style.opacity = "1";
                     e.target.reset();
                 };
@@ -130,3 +126,4 @@
     </script>
 </body>
 </html>
+
