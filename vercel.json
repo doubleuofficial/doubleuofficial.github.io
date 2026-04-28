@@ -3,10 +3,10 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/music", "destination": "/music.html" },
-    { "source": "/admin", "destination": "https://doubleuadmin.vercel.app" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/contact", "destination": "/contact.html" },
     { "source": "/single/:slug", "destination": "/single/:slug.html" },
-    { "source": "/:albumname", "destination": "/:albumname/index.html" },
-    { "source": "/:albumname/:track", "destination": "/:albumname/:track.html" }
+    { "source": "/album/:slug", "destination": "/album/:slug/index.html" }
   ]
 }
 
