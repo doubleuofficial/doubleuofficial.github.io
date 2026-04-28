@@ -1,0 +1,25 @@
+name: Update Music Database
+on:
+  repository_dispatch:
+    types: [update_music]
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Append New Entry
+        run: |
+          NEW_ENTRY='${{ toJson(github.event.client_payload) }}'
+          jq ". = [$NEW_ENTRY] + ." music.json > temp.json && mv temp.json music.json
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "DoubleU-Bot"
+          git config --global user.email "bot@doubleuofficial.online"
+          git add music.json
+          git commit -m "Admin Update: New Release Added"
+          git push
+

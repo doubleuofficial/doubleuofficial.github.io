@@ -3,8 +3,10 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/music", "destination": "/music.html" },
+    { "source": "/admin", "destination": "https://doubleuadmin.vercel.app" },
     { "source": "/single/:slug", "destination": "/single/:slug.html" },
     { "source": "/:albumname", "destination": "/:albumname/index.html" },
     { "source": "/:albumname/:track", "destination": "/:albumname/:track.html" }
   ]
 }
+

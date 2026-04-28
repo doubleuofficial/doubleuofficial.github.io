@@ -5,60 +5,54 @@
     <title>Admin // DoubleU HQ</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background: #050505; color: #eee; font-family: sans-serif; }
-        .input-style { background: #111; border: 1px solid #222; padding: 12px; color: white; width: 100%; border-radius: 4px; }
+        body { background: #050505; color: #eee; }
+        .input-style { background: #111; border: 1px solid #222; padding: 12px; color: white; width: 100%; }
         .accent { color: #FF5F1F; }
     </style>
 </head>
 <body class="p-8 md:p-20">
     <div class="max-w-4xl mx-auto">
-        <header class="mb-12">
-            <h1 class="text-5xl font-black italic uppercase accent">Metadata Generator</h1>
-            <p class="text-xs text-gray-500 uppercase tracking-widest mt-2">Generate entry for music.json</p>
-        </header>
-
+        <h1 class="text-5xl font-black italic uppercase accent mb-8">Metadata Console</h1>
+        
         <form id="meta-form" class="grid grid-cols-2 gap-4 bg-zinc-900/30 p-8 border border-white/5">
-            <div class="col-span-2"><input id="title" placeholder="Track Title" class="input-style" required></div>
+            <div class="col-span-2">
+                <input id="title" placeholder="Track Title" class="input-style" required>
+            </div>
+            <input id="slug" placeholder="URL Slug (Auto-generated)" class="input-style" readonly>
+            <input id="release_date" type="date" class="input-style" required>
             <select id="type" class="input-style">
                 <option value="Single">Single</option>
                 <option value="Album">Album</option>
             </select>
-            <input id="release_date" type="date" class="input-style" required>
-            <input id="slug" placeholder="Slug (e.g. cold-sheets)" class="input-style" required>
             <input id="release_no" type="number" placeholder="Release #" class="input-style">
-            
-            <div class="col-span-2 pt-4">
-                <button type="submit" class="w-full bg-cyan-600 text-black font-black p-4 uppercase italic hover:bg-white transition-all">Generate JSON Block</button>
-            </div>
+            <button type="submit" class="col-span-2 bg-white text-black font-bold py-4 hover:bg-orange-500 transition-colors uppercase tracking-widest">Generate & Sync</button>
         </form>
 
-        <div class="mt-12">
-            <label class="text-[10px] uppercase font-bold text-gray-500 mb-2 block tracking-widest">Output (Copy this into music.json):</label>
-            <textarea id="output" class="w-full h-64 bg-black border border-cyan-900/30 p-4 text-cyan-400 font-mono text-xs focus:outline-none" readonly></textarea>
-        </div>
+        <textarea id="output" class="w-full h-48 mt-8 bg-black border border-cyan-900/30 p-4 text-cyan-400 font-mono text-xs" readonly></textarea>
     </div>
 
     <script>
-        document.getElementById('meta-form').onsubmit = (e) => {
+        const titleInput = document.getElementById('title');
+        const slugInput = document.getElementById('slug');
+
+        titleInput.addEventListener('input', () => {
+            slugInput.value = titleInput.value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        });
+
+        document.getElementById('meta-form').onsubmit = async (e) => {
             e.preventDefault();
-            const title = document.getElementById('title').value;
-            const type = document.getElementById('type').value;
-            const slug = document.getElementById('slug').value;
-            const date = document.getElementById('release_date').value;
-            const num = document.getElementById('release_no').value;
-
             const entry = {
-                "release_no": parseInt(num),
-                "title": title,
-                "type": type,
-                "slug": slug,
-                "release_date": date,
-                "site_path": type === "Single" ? `/single/${slug}.html` : `/album/${slug}/index.html`,
-                "image_path": type === "Single" ? `/assets/single/${slug}.webp` : `/assets/album/${slug}/cover.webp`,
-                "audio_path": `/assets/audio/${slug}.wav`
+                "release_no": parseInt(document.getElementById('release_no').value),
+                "title": titleInput.value,
+                "type": document.getElementById('type').value,
+                "slug": slugInput.value,
+                "release_date": document.getElementById('release_date').value,
+                "site_path": `/single/${slugInput.value}`,
+                "image_path": `/assets/single/${slugInput.value}.webp`,
+                "audio_path": `/assets/audio/${slugInput.value}.wav`
             };
-
-            document.getElementById('output').value = JSON.stringify(entry, null, 2) + ",";
+            document.getElementById('output').value = JSON.stringify(entry, null, 2);
+            // Call your sync function here
         };
     </script>
 </body>
