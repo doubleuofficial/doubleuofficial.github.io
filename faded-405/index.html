@@ -3,125 +3,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faded 405 // DoubleU</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/style.css">
+    <title>Faded 405 | DoubleU</title>
+    
+    <style>
+        body { background-color: #000; color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; text-align: center; }
+        h1 { color: #ff5f00; text-transform: uppercase; margin-top: 10px; }
+        .cyan { color: #00ffff; }
+        .track-card { 
+            background: #0a0a0a; border: 1px solid #1a1a1a; padding: 15px; 
+            margin: 10px 0; display: flex; justify-content: space-between; 
+            align-items: center; text-decoration: none; color: #fff;
+        }
+        .track-card:hover { border-color: #ff5f00; background: #111; }
+        img { width: 100%; max-width: 400px; border: 1px solid #ff5f00; }
+        audio { margin-top: 30px; width: 100%; filter: invert(1); }
+        .nav-btn { display: inline-block; margin-bottom: 20px; color: #00ffff; text-decoration: none; border: 1px solid #00ffff; padding: 5px 15px; }
+    </style>
+
 </head>
-<body class="bg-[#050505] text-[#eee] p-6 md:p-10">
-    <div class="film-grain"></div>
-    <div class="max-w-4xl mx-auto">
-        <header class="flex flex-col md:flex-row gap-12 items-center mb-16 mt-10">
-            <img src="/assets/album/faded-405.webp" class="w-72 h-72 object-cover shadow-2xl border border-white/10">
-            <div class="text-center md:text-left">
-                <p class="text-[#FF5F1F] text-[10px] font-bold uppercase tracking-[0.5em] mb-4">Official Album</p>
-                <h1 class="text-6xl md:text-8xl font-black italic uppercase tracking-tighter mb-4">Faded 405</h1>
-                <p class="text-xs text-gray-500 uppercase tracking-widest">Released 2026-02-27</p>
-                <div class="flex gap-4 mt-8 justify-center md:justify-start">
-                    <a href="https://open.spotify.com/album/0udTHknZfINCMd8ipkmaGv" class="text-xs font-bold hover:text-cyan-400 transition">SPOTIFY</a>
-                    <a href="https://geo.music.apple.com/album/faded-405/1874730082?app=music&at=11lPP6" class="text-xs font-bold hover:text-cyan-400 transition">APPLE</a>
-                </div>
-            </div>
+<body>
+    <div class="container">
+        <header style="padding: 40px 0;">
+            <img src="/assets/album/faded-405.webp" style="width: 200px; margin-bottom: 20px;">
+            <h1>Faded 405</h1>
         </header>
-        <div class="border-t border-white/10">
-            
-        <a href="/faded-405/fading-out" class="flex justify-between items-center p-5 border-b border-white/5 hover:bg-white/5 transition-all group">
-            <div class="flex items-center gap-4">
-                <span class="text-xs text-gray-600 font-mono">01</span>
-                <span class="font-bold uppercase tracking-widest text-sm group-hover:text-cyan-400">Fading Out</span>
-            </div>
-            <span class="text-[9px] text-gray-500 group-hover:text-white transition-colors">PLAY //</span>
-        </a>
-    
-        <a href="/faded-405/run-from-the-voices" class="flex justify-between items-center p-5 border-b border-white/5 hover:bg-white/5 transition-all group">
-            <div class="flex items-center gap-4">
-                <span class="text-xs text-gray-600 font-mono">02</span>
-                <span class="font-bold uppercase tracking-widest text-sm group-hover:text-cyan-400">Run From The Voices</span>
-            </div>
-            <span class="text-[9px] text-gray-500 group-hover:text-white transition-colors">PLAY //</span>
-        </a>
-    
-        <a href="/faded-405/devil-in-the-rear-view" class="flex justify-between items-center p-5 border-b border-white/5 hover:bg-white/5 transition-all group">
-            <div class="flex items-center gap-4">
-                <span class="text-xs text-gray-600 font-mono">03</span>
-                <span class="font-bold uppercase tracking-widest text-sm group-hover:text-cyan-400">Devil in the Rear View</span>
-            </div>
-            <span class="text-[9px] text-gray-500 group-hover:text-white transition-colors">PLAY //</span>
-        </a>
-    
-        <a href="/faded-405/shattered-echoes" class="flex justify-between items-center p-5 border-b border-white/5 hover:bg-white/5 transition-all group">
-            <div class="flex items-center gap-4">
-                <span class="text-xs text-gray-600 font-mono">04</span>
-                <span class="font-bold uppercase tracking-widest text-sm group-hover:text-cyan-400">Shattered Echoes</span>
-            </div>
-            <span class="text-[9px] text-gray-500 group-hover:text-white transition-colors">PLAY //</span>
-        </a>
-    
-        <a href="/faded-405/found-you-in-the-rainfall" class="flex justify-between items-center p-5 border-b border-white/5 hover:bg-white/5 transition-all group">
-            <div class="flex items-center gap-4">
-                <span class="text-xs text-gray-600 font-mono">05</span>
-                <span class="font-bold uppercase tracking-widest text-sm group-hover:text-cyan-400">Found You in the RainFall</span>
-            </div>
-            <span class="text-[9px] text-gray-500 group-hover:text-white transition-colors">PLAY //</span>
-        </a>
-    
-        <a href="/faded-405/shadow-boxer" class="flex justify-between items-center p-5 border-b border-white/5 hover:bg-white/5 transition-all group">
-            <div class="flex items-center gap-4">
-                <span class="text-xs text-gray-600 font-mono">06</span>
-                <span class="font-bold uppercase tracking-widest text-sm group-hover:text-cyan-400">Shadow Boxer</span>
-            </div>
-            <span class="text-[9px] text-gray-500 group-hover:text-white transition-colors">PLAY //</span>
-        </a>
-    
-        <a href="/faded-405/faded-frame" class="flex justify-between items-center p-5 border-b border-white/5 hover:bg-white/5 transition-all group">
-            <div class="flex items-center gap-4">
-                <span class="text-xs text-gray-600 font-mono">07</span>
-                <span class="font-bold uppercase tracking-widest text-sm group-hover:text-cyan-400">Faded Frame</span>
-            </div>
-            <span class="text-[9px] text-gray-500 group-hover:text-white transition-colors">PLAY //</span>
-        </a>
-    
-        <a href="/faded-405/the-anniversary" class="flex justify-between items-center p-5 border-b border-white/5 hover:bg-white/5 transition-all group">
-            <div class="flex items-center gap-4">
-                <span class="text-xs text-gray-600 font-mono">08</span>
-                <span class="font-bold uppercase tracking-widest text-sm group-hover:text-cyan-400">The Anniversary</span>
-            </div>
-            <span class="text-[9px] text-gray-500 group-hover:text-white transition-colors">PLAY //</span>
-        </a>
-    
-        <a href="/faded-405/zero-sum" class="flex justify-between items-center p-5 border-b border-white/5 hover:bg-white/5 transition-all group">
-            <div class="flex items-center gap-4">
-                <span class="text-xs text-gray-600 font-mono">09</span>
-                <span class="font-bold uppercase tracking-widest text-sm group-hover:text-cyan-400">Zero Sum</span>
-            </div>
-            <span class="text-[9px] text-gray-500 group-hover:text-white transition-colors">PLAY //</span>
-        </a>
-    
-        <a href="/faded-405/the-carpenters-hands" class="flex justify-between items-center p-5 border-b border-white/5 hover:bg-white/5 transition-all group">
-            <div class="flex items-center gap-4">
-                <span class="text-xs text-gray-600 font-mono">10</span>
-                <span class="font-bold uppercase tracking-widest text-sm group-hover:text-cyan-400">The Carpenter's Hands</span>
-            </div>
-            <span class="text-[9px] text-gray-500 group-hover:text-white transition-colors">PLAY //</span>
-        </a>
-    
-        <a href="/faded-405/finally-free" class="flex justify-between items-center p-5 border-b border-white/5 hover:bg-white/5 transition-all group">
-            <div class="flex items-center gap-4">
-                <span class="text-xs text-gray-600 font-mono">11</span>
-                <span class="font-bold uppercase tracking-widest text-sm group-hover:text-cyan-400">Finally Free</span>
-            </div>
-            <span class="text-[9px] text-gray-500 group-hover:text-white transition-colors">PLAY //</span>
-        </a>
-    
-        <a href="/faded-405/new-foundations" class="flex justify-between items-center p-5 border-b border-white/5 hover:bg-white/5 transition-all group">
-            <div class="flex items-center gap-4">
-                <span class="text-xs text-gray-600 font-mono">12</span>
-                <span class="font-bold uppercase tracking-widest text-sm group-hover:text-cyan-400">New Foundations</span>
-            </div>
-            <span class="text-[9px] text-gray-500 group-hover:text-white transition-colors">PLAY //</span>
-        </a>
-    
-        </div>
+        
+            <a href="fading-out.html" class="track-card">
+                <span>1. Fading Out</span>
+                <span class="cyan">PLAY</span>
+            </a>
+        
+            <a href="run-from-the-voices.html" class="track-card">
+                <span>2. Run From The Voices</span>
+                <span class="cyan">PLAY</span>
+            </a>
+        
+            <a href="devil-in-the-rear-view.html" class="track-card">
+                <span>3. Devil in the Rear View</span>
+                <span class="cyan">PLAY</span>
+            </a>
+        
+            <a href="shattered-echoes.html" class="track-card">
+                <span>4. Shattered Echoes</span>
+                <span class="cyan">PLAY</span>
+            </a>
+        
+            <a href="found-you-in-the-rainfall.html" class="track-card">
+                <span>5. Found You in the RainFall</span>
+                <span class="cyan">PLAY</span>
+            </a>
+        
+            <a href="shadow-boxer.html" class="track-card">
+                <span>6. Shadow Boxer</span>
+                <span class="cyan">PLAY</span>
+            </a>
+        
+            <a href="faded-frame.html" class="track-card">
+                <span>7. Faded Frame</span>
+                <span class="cyan">PLAY</span>
+            </a>
+        
+            <a href="the-anniversary.html" class="track-card">
+                <span>8. The Anniversary</span>
+                <span class="cyan">PLAY</span>
+            </a>
+        
+            <a href="zero-sum.html" class="track-card">
+                <span>9. Zero Sum</span>
+                <span class="cyan">PLAY</span>
+            </a>
+        
+            <a href="the-carpenters-hands.html" class="track-card">
+                <span>10. The Carpenter's Hands</span>
+                <span class="cyan">PLAY</span>
+            </a>
+        
+            <a href="finally-free.html" class="track-card">
+                <span>11. Finally Free</span>
+                <span class="cyan">PLAY</span>
+            </a>
+        
+            <a href="new-foundations.html" class="track-card">
+                <span>12. New Foundations</span>
+                <span class="cyan">PLAY</span>
+            </a>
+        
     </div>
 </body>
 </html>

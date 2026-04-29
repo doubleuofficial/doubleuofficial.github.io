@@ -3,34 +3,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Carpenter's Hands // DoubleU</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body class="bg-[#050505] text-[#eee] selection:bg-cyan-500">
-    <div class="film-grain"></div>
-    <nav class="p-6">
-        <a href="/music" class="text-[#FF5F1F] font-bold tracking-widest text-[10px] uppercase hover:text-white transition">← Back to Catalog</a>
-    </nav>
-    <main class="flex flex-col items-center justify-center min-h-[80vh] px-6 text-center">
-        <div class="relative group">
-            <img src="/assets/album/faded-405.webp" class="w-64 h-64 md:w-96 md:h-96 object-cover mb-8 shadow-2xl border border-white/10 transition-transform duration-700 group-hover:scale-[1.02]">
-            <div class="absolute bottom-12 left-0 right-0 px-4"><audio controls class="w-full opacity-30 hover:opacity-100 transition-opacity"><source src="/assets/audio/faded-405/the-carpenters-hands.wav" type="audio/wav"></audio></div>
-        </div>
-        
-        <h1 class="text-4xl md:text-6xl font-black italic uppercase tracking-tighter mb-2">The Carpenter's Hands</h1>
-        
-        
-        <p class="text-cyan-400 text-[10px] uppercase tracking-[0.4em] mb-8">
-            Album Track // Released 2026-02-27
-        </p>
+    <title>The Carpenter's Hands | DoubleU</title>
+    
+    <style>
+        body { background-color: #000; color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; text-align: center; }
+        h1 { color: #ff5f00; text-transform: uppercase; margin-top: 10px; }
+        .cyan { color: #00ffff; }
+        .track-card { 
+            background: #0a0a0a; border: 1px solid #1a1a1a; padding: 15px; 
+            margin: 10px 0; display: flex; justify-content: space-between; 
+            align-items: center; text-decoration: none; color: #fff;
+        }
+        .track-card:hover { border-color: #ff5f00; background: #111; }
+        img { width: 100%; max-width: 400px; border: 1px solid #ff5f00; }
+        audio { margin-top: 30px; width: 100%; filter: invert(1); }
+        .nav-btn { display: inline-block; margin-bottom: 20px; color: #00ffff; text-decoration: none; border: 1px solid #00ffff; padding: 5px 15px; }
+    </style>
 
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://open.spotify.com/album/0udTHknZfINCMd8ipkmaGv?si=9Qq-ZyJvQR-JeHQuN19m4g" class="px-6 py-3 border border-white/20 text-[10px] font-bold uppercase hover:bg-white hover:text-black transition">Spotify</a>
-            <a href="https://music.apple.com/us/album/faded-405/1874730082" class="px-6 py-3 border border-white/20 text-[10px] font-bold uppercase hover:bg-white hover:text-black transition">Apple Music</a>
-            <a href="https://youtube.com/playlist?list=OLAK5uy_n3aFNgsim21cn86Zug0CJU1A4OoiZsyIM&si=dkA6ZzlmYJzt3F-Y" class="px-6 py-3 border border-white/20 text-[10px] font-bold uppercase hover:bg-white hover:text-black transition">YouTube</a>
-        </div>
-    </main>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="nav-btn">BACK TO ALBUM</a>
+        <br>
+        <img src="/assets/album/faded-405.webp" alt="Artwork">
+        <h1>The Carpenter's Hands</h1>
+        <p class="cyan">Faded 405 — Track 10</p>
+        <audio controls src="/assets/audio/faded-405/the-carpenters-hands.wav"></audio>
+    </div>
 </body>
 </html>

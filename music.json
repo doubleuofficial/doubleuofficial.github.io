@@ -49,19 +49,19 @@
   },
   {
     "release_no": null,
-    "title": "If We Won",
+    "title": "Wondering If We Won",
     "type": "Album Track",
     "album_name": "Dear Author",
     "track_no": 3,
     "featured_artist": null,
-    "slug": "if-we-won",
+    "slug": "wondering-if-we-won",
     "release_date": "2026-04-27",
     "spotify_link": "https://open.spotify.com/album/4nV9MYZCM5ym8ckHq4Gvdf?si=gJwPlh3TQUqiNIhIw3ZasA",
     "apple_link": null,
     "youtube_link": "https://youtube.com/playlist?list=OLAK5uy_mxkGSFfMRZOuWyCXfR56aUMv46cmZfzZQ",
-    "site_path": "/dear-author/if-we-won",
+    "site_path": "/dear-author/wondering-if-we-won",
     "image_path": "/assets/album/dear-author.webp",
-    "audio_path": "/assets/audio/if-we-won.wav"
+    "audio_path": "/assets/audio/wondering-if-we-won.wav"
   },
   {
     "release_no": null,
@@ -110,8 +110,7 @@
     "site_path": "/dear-author/church-avenue",
     "image_path": "/assets/album/dear-author.webp",
     "audio_path": "/assets/audio/church-avenue.wav"
-  }
-]
+  },
 
 
   {
