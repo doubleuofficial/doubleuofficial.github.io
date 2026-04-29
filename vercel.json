@@ -5,8 +5,11 @@
     { "source": "/music", "destination": "/music.html" },
     { "source": "/about", "destination": "/about.html" },
     { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/single/:slug", "destination": "/single/:slug.html" },
-    { "source": "/album/:slug", "destination": "/album/:slug/index.html" }
+    
+    /* This makes every song URL point to the same template file */
+    { "source": "/single/:slug", "destination": "/template.html" },
+    { "source": "/dear-author/:slug", "destination": "/template.html" },
+    { "source": "/faded-405/:slug", "destination": "/template.html" }
   ]
 }
 

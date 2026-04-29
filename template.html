@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading... | DoubleU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --accent-orange: #FF5F1F; --accent-cyan: #06B6D4; }
+        body { background: #000; color: white; font-family: 'Inter', sans-serif; }
+        .accent-text { color: var(--accent-orange); }
+        .cyan-border { border-color: var(--accent-cyan); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col p-8 md:p-24">
+    <nav class="mb-16">
+        <a href="/music" class="text-[10px] uppercase tracking-[0.5em] text-gray-500 hover:text-white transition-colors">← Back to Archive</a>
+    </nav>
+
+    <main class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div class="relative group">
+            <img id="track-cover" src="" alt="Cover Art" class="w-full aspect-square object-cover grayscale border border-white/10 group-hover:grayscale-0 transition-all duration-700">
+            <div id="track-type-badge" class="absolute -top-4 -right-4 bg-white text-black px-4 py-1 text-[9px] font-bold uppercase tracking-widest"></div>
+        </div>
+
+        <div class="space-y-8">
+            <div>
+                <h1 id="track-title" class="text-6xl md:text-8xl font-black italic uppercase tracking-tighter leading-none accent-text"></h1>
+                <p id="track-meta" class="text-gray-500 uppercase tracking-[0.3em] text-[10px] font-bold mt-4"></p>
+            </div>
+
+            <div class="bg-zinc-900/50 p-6 border border-white/5">
+                <audio id="audio-player" controls class="w-full h-8 brightness-90 contrast-125"></audio>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <a id="spotify-link" href="#" target="_blank" class="border border-white/10 p-4 text-center text-[10px] uppercase tracking-widest hover:bg-white hover:text-black transition-all">Spotify</a>
+                <a id="youtube-link" href="#" target="_blank" class="border border-white/10 p-4 text-center text-[10px] uppercase tracking-widest hover:bg-white hover:text-black transition-all">YouTube</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
+
